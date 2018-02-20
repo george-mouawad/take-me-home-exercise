@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+    h1.
+        Employee ID #{employee._id}
+    form(action='/employees/#{employee._id}/edit',method='post',name='updateEmployee',enctype='application/x-www-form-urlencoded')
+        p First Name: 
+            input#inputFirstName(type='text', value='#{employee.name.first}', name='firstName' required)
+        p Last Name: 
+            input#inputLastName(type='text', value='#{employee.name.last}', name='lastName' required)
+        p Department: 
+            input#inputDepartment(type='text',  name='department' required)
+        p Street: 
+            input#inputStreet(type='text', value='#{employee.location.street}', name='street' required)
+        p City: 
+            input#inputCity(type='text', value='#{employee.location.city}', name='city' required)
+        p State: 
+            input#inputState(type='text', value='#{employee.location.state}', name='state')
+        p Country: 
+        input#inputCountry(type='text', value='#{employee.location.country}', name='country')
+        p Post Code: 
+            input#inputPostcode(type='text', value='#{employee.location.postcode}', name='postcode')
+        p Phone: 
+            input#inputPhone(type='text', value='#{employee.phone}', name='phone')
+        p Cell: 
+            input#inputCell(type='text', value='#{employee.cell}', name='cell' required)
+        p Date of Birth: 
+            input#inputDob(type='date', value='#{employeedob}', name='dob' required)        
+        p 
+            input(type='hidden',value='PUT',name='_method')
+        p 
+            button#btnSubmit(type='submit').
+                Update

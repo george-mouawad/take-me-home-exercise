@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddEmployee(name="addemployee",method="post",action="/employees")
+        p First Name: 
+            input#inputFirstName(type='text',  name='firstName' required)
+        p Last Name: 
+            input#inputLastName(type='text',  name='lastName' required)
+        p Department: 
+            input#inputDepartment(type='text',  name='department' required)
+        p Street: 
+            input#inputStreet(type='text',  name='street' required)
+        p City: 
+            input#inputCity(type='text',  name='city' required)
+        p State: 
+            input#inputState(type='text',  name='state')
+        p Country: 
+            input#inputCountry(type='text',  name='country' required)
+        p Post Code: 
+            input#inputPostcode(type='text',  name='postcode', placeholder='Enter number..')
+        p Phone: 
+            input#inputPhone(type='text',  name='phone')
+        p Cell: 
+            input#inputCell(type='text',  name='cell' required)
+        p Date of Birth: 
+            input#inputDob(type='date', name='dob' required)    
+        
+        p
+            button#btnSubmit(type="submit") submit

@@ -1,0 +1,124 @@
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 100% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753;
+	margin: 0;
+  padding: 50px;
+  }
+
+
+ button{
+    background-color: rgb(48, 92, 153);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size:16px;
+    border-radius: 4px
+} 
+  * {
+    box-sizing: border-box;
+}
+
+input[type=date], select, textarea{
+  display: block;
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=text], select, textarea{
+    display: block;
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size:16px;
+}
+
+
+.deleteButton {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(48, 92, 153);;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+}
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  background-color: rgb(48, 92, 153);
+  color: white;
+  text-align: center;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+

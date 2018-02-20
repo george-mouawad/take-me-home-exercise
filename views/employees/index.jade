@@ -1,0 +1,45 @@
+
+extends ../layout
+
+block content
+    h1.
+         #{title}
+    div
+        table.table.table-hover
+            thead
+                tr: th First Name
+                    th Last Name
+                    th Department
+                    th Street
+                    th City
+                    th State
+                    th Country
+                    th Post Code
+                    th Phone
+                    th cell
+                    th Date of Birth
+                    th Employee ID
+                    tbody
+                        - each employee, i in employees
+                            tr
+                                td=employee.name.first                          
+                                td=employee.name.last
+                                td=employee.department
+                                td=employee.location.street
+                                td=employee.location.city
+                                td=employee.location.state
+                                td=employee.location.country
+                                td=employee.location.postcode
+                                td=employee.phone
+                                td=employee.cell
+                                td=employee.dob!=null?employee.dob.toDateString():''
+                                td=employee._id
+                                td 
+                                    form(action='/employees/#{employee._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                                        input(type='hidden',value='DELETE',name='_method')
+                                        button(type='submit' class='deleteButton').
+                                            Delete
+                                td 
+                                    a(href='/employees/#{employee._id}/edit') Edit
+                                td
+                                    a(href='/employees/#{employee._id}') Show

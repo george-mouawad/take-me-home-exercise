@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1.
+        Employee Profile #{employee._id}
+    p First Name: #{employee.name.first}
+    p Last Name: #{employee.name.last}
+    p Department: #{employee.department}
+    p Street: #{employee.location.street}
+    p City: #{employee.location.city}
+    p State: #{employee.location.state}
+    p Post Code: #{employee.location.postcode}
+    p Phone: #{employee.phone}
+    p Cell: #{employee.cell}
+    p DOB: #{employeedob}   
